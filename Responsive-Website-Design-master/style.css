@@ -1,0 +1,688 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+
+}
+
+h1 {
+  padding: 8px;
+  /* background: rgba(247, 247, 247, 0.8); Màu nền xanh lá */
+  border-radius: 8px;
+  margin: 0;
+  font-size: 64px;
+  font-family: "Roboto Slab", serif;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  line-height: 1.5;
+}
+h3 {
+  color: rgb(0, 0, 0); /* Màu đen */
+}
+
+main {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #2e7d32; /* Màu chữ liên kết xanh lá */
+}
+
+a:hover {
+  text-decoration: underline;
+    color: #2e7d32; /* Màu chữ liên kết xanh lá */
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Inputs */
+
+input,
+textarea {
+  height: 32px;
+  padding: 0 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  border: none;
+  box-shadow: white;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+/* Banner */
+#banner {
+    position: relative;
+    height: 100vh;
+    width: 100vw; /* Ensure the banner takes full width of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Hiển thị các phần tử con theo chiều dọc */
+    overflow: hidden;
+}
+
+#banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    z-index: -1;
+    filter: blur(5px) brightness(0.7);
+}
+
+#banner h1 {
+    font-size: 64px;
+    font-family: "Roboto Slab", serif;
+    border-radius: 8px;
+    display: block; /* Hiển thị tiêu đề h1 như một phần tử block */
+}
+
+#banner h3 {
+    border-radius: 8px;
+    padding: 0 24px;
+    font-size: 24px;
+    color: white;
+    display: block; /* Hiển thị tiêu đề h3 như một phần tử block */
+    margin-top: 20px; /* Tạo khoảng cách giữa tiêu đề h1 và h3 */
+}
+
+#banner button {
+    margin-top: 20px; /* Tạo khoảng cách giữa tiêu đề h3 và nút */
+}
+
+
+/* Search Box */
+
+#searchbox {
+  position: fixed;
+  right: 0;
+  top: 24px;
+  width: 500px;
+  pointer-events: none;
+  z-index: 50;
+  transition: 0.4s;
+}
+
+#searchbox input {
+  height: 48px;
+  width: 100%;
+}
+
+
+
+nav {
+  height: 72px;
+  background: linear-gradient(
+    -45deg,
+    rgb(15, 169, 66),
+    rgb(105, 220, 187)
+  ); /* Màu nền thanh điều hướng xanh lá */
+  width: 100%;
+  margin: 0;
+  position: relative;
+  top: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 0 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  border: rgb(248, 246, 246) solid 1px;
+}
+.sua {
+  position: fixed;
+  height: 80px;
+  background: linear-gradient(
+    -45deg,
+    rgb(15, 169, 66),
+    rgb(105, 220, 187)
+  ); /* Màu nền thanh điều hướng xanh lá */
+
+  width: 100%;
+  margin: 0;
+  /* position: relative; */
+  top: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 0 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  border: rgb(254, 253, 253) solid 1px;
+}
+
+nav a {
+  padding: 0 32px;
+  color: #fbf9f9; /* Màu chữ xanh lá nhạt */
+  transition: 0.4s;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #000000; /* Màu chữ khi hover xanh lá đậm */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.active {
+  color: #a5d6a7; /* Màu chữ active xanh lá nhạt */
+}
+
+#logo-img {
+  display: flex;
+  height: 100%;
+
+  /* padding: 0 32px; */
+  align-items: center;
+  color: white;
+  transition: 0.4s;
+  width: 100px;
+}
+.anh {
+  /* padding-left: 0px;
+  padding-top: 0px; */
+}
+
+#logo-img img {
+  height: 100px;
+  left: 0px;
+}
+#menu-icon {
+  height: 100%;
+  font-size: 28px;
+  padding: 0 4px;
+  color: #000000; /* Màu biểu tượng menu xanh lá nhạt */
+  display: none;
+  align-items: center;
+}
+
+/* Search Icon */
+
+#search-icon {
+  color: white;
+  padding: 0 32px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#search-icon:hover {
+  color: #1b5e20; /* Màu biểu tượng khi hover xanh lá đậm */
+}
+
+/* Slideout Menu */
+
+#slideout-menu {
+  display: none;
+  /* background: #4caf50; Màu nền menu trượt ra xanh lá */
+  z-index: 100;
+  position: fixed;
+  transition: 0.4s;
+  margin-top: 72px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#slideout-menu ul {
+  list-style: none;
+  padding: 0 32px;
+}
+
+#slideout-menu ul li {
+  padding: 8px;
+}
+
+#slideout-menu a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+#slideout-menu input {
+  width: 85%;
+  padding: 8px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Sections */
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-left: 3px solid #000000; /* Đường viền trái xanh lá */
+  border-right: 3px solid #000000; /* Đường viền phải xanh lá */
+  transition: all 0.4s;
+  display: inline-block;
+  padding: 4px 32px;
+  color: #000000;
+}
+
+.section-heading:hover {
+  padding: 4px 48px;
+  background: linear-gradient(-45deg, rgb(15, 169, 66), rgb(105, 220, 187));
+  border-left: 3px solid #2e7d32; /* Đường viền trái xanh lá */
+  border-right: 3px solid #2e7d32; /* Đường viền phải xanh lá */
+  color: white;
+}
+
+/* Section Source */
+
+#section-source p {
+  padding: 8px;
+  text-align: center;
+}
+
+#section-source a {
+  margin: 8px;
+  text-align: center;
+}
+
+/* Card */
+
+.card-image {
+  transition: 0.4s;
+}
+
+.card-image:hover {
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.card .card-description {
+  padding: 0 8px;
+}
+
+.card-meta-blogpost {
+  color: #333;
+  font-size: 14px;
+  padding: 16px;
+  font-family: "Roboto Slab", serif;
+}
+
+.card-meta-blogpost a {
+  color: #333;
+}
+
+/* Button Read m*/
+
+.btn {
+  padding: 15px 90px;
+  border: 1.5px solid rgb(62, 211, 122); /* Đường viền nút xanh lá */
+  transition: 0.4s;
+  display: inline-block;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(141, 139, 139, 0.4);
+  border-radius: 30px;
+  padding: 10x 20px;
+  color: rgb(35, 135, 75);
+  font-size: 20px;
+}
+.btn:hover {
+  background: linear-gradient(-45deg, rgb(15, 169, 66), rgb(105, 220, 187));
+  text-decoration: none;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.btn-readmore {
+  padding: 8px 24px;
+  border: 1.5px solid rgb(62, 211, 122); /* Đường viền nút xanh lá */
+  transition: 0.4s;
+  display: inline-block;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgb(246, 246, 246);
+  border-radius: 20px;
+  padding: 10x 20px;
+  color: rgb(35, 135, 75);
+}
+
+.btn-readmore:hover {
+  background: linear-gradient(-45deg, rgb(15, 169, 66), rgb(105, 220, 187));
+  text-decoration: none;
+  /* padding: 8px 64px 8px 24px; */
+  color: white;
+}
+
+/* Footer */
+
+footer {
+  background: linear-gradient(
+    -45deg,
+    rgb(15, 169, 66),
+    rgb(105, 220, 187)
+  ); /* Màu nền footer xanh lá */
+  padding: 8px;
+  color: #eee;
+  display: flex;
+}
+
+footer a {
+  color: white;
+}
+
+footer #left-footer {
+  flex: 1;
+  border-right: 1px solid #a5d6a7; /* Đường viền phải xanh lá nhạt */
+  padding-left: 32px;
+}
+
+footer #left-footer ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+#button {
+  padding: 15px 20px;
+}
+footer #right-footer {
+  flex: 2;
+  padding: 8px;
+  text-align: center;
+}
+
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github {
+  color: white;
+  transition: 0.4s;
+}
+
+footer #social-media-footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+footer #social-media-footer ul li {
+  font-size: 48px;
+  padding: 16px;
+  transition: 0.4s;
+}
+
+footer #social-media-footer ul li:hover a .fa-youtube {
+  color: #388e3c; /* Màu khi hover xanh lá */
+}
+
+footer #social-media-footer ul li:hover a .fa-facebook {
+  color: #1b5e20; /* Màu khi hover xanh lá đậm */
+}
+
+footer #social-media-footer ul li:hover a .fa-github {
+  color: #bbb;
+}
+
+/* Blog List page */
+
+.page-heading {
+  font-size: 32px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-left: 3px solid #2e7d32; /* Đường viền trái xanh lá */
+  border-right: 3px solid #2e7d32; /* Đường viền phải xanh lá */
+  transition: all 0.4s;
+  display: inline-block;
+  padding: 4px 32px;
+  margin-top: 120px;
+}
+
+.page-heading:hover {
+  padding: 4px 48px;
+  background: #388e3c; /* Màu nền khi hover xanh lá */
+}
+
+.card-meta {
+  color: #333;
+  font-size: 14px;
+  padding-left: 8px;
+  font-family: "Roboto Slab", serif;
+}
+
+.card-meta a {
+  color: #333;
+}
+
+/* Pagination */
+
+.pagination {
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pagination a {
+  border-top: 3px solid white;
+  display: inline-block;
+  padding: 8px 16px;
+  transition: 0.4s;
+}
+
+.pagination a:hover {
+  text-decoration: none;
+  border-top: 3px solid #2e7d32; /* Đường viền khi hover xanh lá */
+}
+
+/* Single Blogpost */
+
+#post-container {
+  display: flex;
+}
+
+#blogpost {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border-left: 1px solid #999;
+}
+
+#blogpost .card {
+  width: 100%;
+}
+
+#blogpost .card-image:hover {
+  box-shadow: none;
+}
+
+/* Sidebar */
+
+#sidebar {
+  background: #4caf50; /* Màu nền sidebar xanh lá */
+  flex: 1;
+  padding: 8px 16px;
+  color: white;
+  box-shadow: inset 27px 0 51px -18px rgba(0, 0, 0, 0.75);
+}
+
+/* Comments section */
+
+#comments-section {
+  border-top: 2px solid #eee;
+  padding: 8px;
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+
+  #menu-icon {
+    display: flex;
+  }
+
+  #slideout-menu {
+    display: block;
+  }
+
+  #searchbox {
+    display: none;
+  }
+
+  #blogpost {
+    width: 100%;
+    border-left: 0;
+  }
+
+  #sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  main {
+    width: 95%;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  .card,
+  .card .card-image img {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer #left-footer {
+    flex: 1;
+    border-right: 0;
+    padding-left: 0;
+  }
+
+  footer #right-footer {
+    background: #eee;
+    color: black;
+  }
+
+  footer #right-footer a {
+    color: black;
+  }
+
+  footer #social-media-footer a .fa-facebook,
+  footer #social-media-footer a .fa-youtube,
+  footer #social-media-footer a .fa-github {
+    color: black;
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  #banner h3 {
+    font-size: 20px;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  #logo-img {
+    padding: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    width: 95%;
+  }
+  .card {
+    width: 45%;
+  }
+  .card .card-image img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 100%;
+  }
+}
+#slideout-menu {
+  z-index: 101; /* Set z-index higher than other elements */
+}
+nav {
+  position: relative; /* Change position to relative */
+}
+/* CSS để hiển thị và ẩn slideout-menu */
+#slideout-menu {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#slideout-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.card-image img {
+    width: 100%; /* Sử dụng 100% chiều rộng của khung hình */
+    height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ khung hình */
+    object-fit: cover; /* Đảm bảo rằng hình ảnh sẽ bị căn chỉnh và cắt tỉ lệ để vừa với khung hình */
+}
+/* Trạng thái khi menu đóng */
+nav.closed {
+  background: linear-gradient(-45deg, rgb(15, 169, 66), rgb(105, 220, 187)); /* Màu nền xanh ombre */
+  transition: background 0.4s;
+}
+
+/* Trạng thái khi menu mở */
+nav.open {
+  background: linear-gradient(-45deg, rgb(15, 169, 66), rgb(105, 220, 187)); /* Màu nền xanh ombre */
+  transition: background 0.4s;
+}
+
+/* Trạng thái khi menu đóng trên điện thoại */
+@media (max-width: 719px) {
+  nav.closed {
+    background: linear-gradient(-45deg, rgb(15, 169, 66), rgb(105, 220, 187)); /* Màu nền xanh ombre */
+  }
+}
+
+/* Trạng thái khi menu mở trên điện thoại */
+@media (max-width: 719px) {
+  nav.open {
+    background: linear-gradient(-45deg, rgb(15, 169, 66), rgb(105, 220, 187)); /* Màu nền xanh ombre */
+  }
+}

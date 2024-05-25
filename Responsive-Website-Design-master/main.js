@@ -1,0 +1,32 @@
+const menuIcon = document.getElementById("menu-icon");
+const slideoutMenu = document.getElementById("slideout-menu");
+const searchIcon = document.getElementById("search-icon");
+const searchBox = document.getElementById("searchbox");
+
+searchIcon.addEventListener('click', function () {
+  if (searchBox.style.top == '72px') {
+    searchBox.style.top = '24px';
+    searchBox.style.pointerEvents = 'none';
+  } else {
+    searchBox.style.top = '72px';
+    searchBox.style.pointerEvents = 'auto';
+  }
+});
+
+menuIcon.addEventListener('click', function () {
+  if (slideoutMenu.style.opacity == "1") {
+    slideoutMenu.style.opacity = '0';
+    slideoutMenu.style.pointerEvents = 'none';
+  } else {
+    slideoutMenu.style.opacity = '1';
+    slideoutMenu.style.pointerEvents = 'auto';
+  }
+})
+// Lấy phần tử icon trái tim
+var heartIcon = document.querySelector('#search-icon');
+
+// Thêm sự kiện click cho icon trái tim
+heartIcon.addEventListener('click', function() {
+    // Chuyển hướng người dùng đến trang đăng nhập khi nhấp vào icon trái tim
+    window.location.href = '../Login/Login.html';
+});

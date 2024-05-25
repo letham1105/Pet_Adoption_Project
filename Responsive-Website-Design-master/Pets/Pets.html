@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="Pets.css">
+    <title>Vigor Vanguard</title>
+</head>
+
+<body>
+<div id="slideout-menu">
+    <ul>
+        <li>
+            <a href="../Home/Home.html">Home</a>
+        </li>
+        <li>
+            <a href="../AdoptionStories/AdoptionStories.html">Adoption Stories</a>
+        </li>
+        <li>
+            <a href="Pets.html">Available Pets</a>
+        </li>
+        <li>
+            <a href="../ContactUs/ContactUs.html">Contact Us</a>
+        </li>
+        <li>
+            <input type="text" placeholder="Search Here">
+        </li>
+    </ul>
+</div>
+
+<nav>
+    <div id="logo-img">
+        <a href="../Home/Home.html"><img src="../img/NEWLOGO.png" alt="Pet Adoption Hub Logo"></a>
+    </div>
+
+    <div id="menu-icon">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul>
+        <li>
+            <a href="../Home/Home.html">Home</a>
+        </li>
+        <li>
+            <a href="../AdoptionStories/AdoptionStories.html">Adoption Stories</a>
+        </li>
+        <li>
+            <a href="Pets.html">Available Pets</a>
+        </li>
+        <li>
+            <a href="../ContactUs/ContactUs.html">Contact Us</a>
+        </li>
+        <li>
+            <div id="search-icon">
+                <i class="fas fa-heart"></i> <!-- Icon trái tim -->
+            </div>
+<!--            <input type="text" placeholder="Search Here">-->
+<!--            <div id="search-icon">-->
+<!--                <i class="fas fa-search"></i>-->
+<!--            </div>-->
+        </li>
+    </ul>
+</nav>
+
+<!--<div id="searchbox">-->
+<!--    <input type="text" placeholder="Search Here">-->
+<!--</div>-->
+<main>
+    <h2 class="section-heading">Available Pets</h2>
+    <div id="post-container" class="container">
+
+        <div class="row">
+            <section class="col-lg-7">
+                <h3>Adoption Process</h3>
+                <p>Before deciding to adopt a dog or cat, ask yourself if you are ready to take lifelong responsibility for them, both financially, in terms of living space, and emotionally. Adoption requires significant commitment from yourself, your family, and relevant parties. Please carefully consider before contacting HPA about adoption.</p>
+                <p>Are you ready? Follow these steps:</p>
+                <ol>
+                    <li>Learn about the pet you want to adopt on the HPA website.</li>
+                    <li>Contact the volunteer in charge of the pet to learn more about them.</li>
+                    <li>Participate in the adoption interview.</li>
+                    <li>Prepare the necessary facilities, complete adoption paperwork, and pay the adoption fee to welcome the pet home.</li>
+                    <li>Regularly update on the pet's situation, especially in case of emergencies for timely advice.</li>
+                </ol>
+            </section>
+            <aside class="col-lg-5">
+                <h3>Adoption Requirements</h3>
+                <p>To adopt a pet, you need to meet some basic requirements:</p>
+                <ul>
+                    <li>Have enough financial resources to care for the pet in the long term.</li>
+                    <li>Have a suitable, spacious, and safe living environment for the pet.</li>
+                    <li>Be willing to spend time caring for and playing with the pet every day.</li>
+                    <li>Commit to not abandoning or returning the pet when issues arise.</li>
+                    <li>Obtain consent from all family members regarding the adoption.</li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="container">
+
+
+
+        <div class="d-flex justify-content-center align-items-center" style="width: 400px; height: 60px; margin: auto; text-align: center; border: 2px solid #ccc; border-radius: 10px; margin-bottom: 30px;">
+            <h2 data-aos="zoom-in" style="font-weight: bold;">Find Pets</h2>
+        </div>
+
+
+        <ul class="nav nav-pills category-isotope center-nav" data-aos="zoom-in">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" data-toggle="tab" data-filter="*" aria-label="All" aria-labelledby="All">All</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter="dog" aria-label="Dog" aria-labelledby="Dog">Dog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter="cat" aria-label="Cat" aria-labelledby="Cat">Cat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter="other" aria-label="Other" aria-labelledby="Other">Other</a>
+            </li>
+        </ul>
+
+        <div class="container" data-aos="zoom-in">
+            <div class="row pt-4">
+
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select id="gender" class="form-control">
+                            <option value="">All</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <select id="age" class="form-control">
+                            <option value="">All</option>
+                            <option value="young">Young</option>
+                            <option value="adult">Adult</option>
+                            <option value="old">Old</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group">
+                        <label>Sterilizations</label>
+                        <select id="sterilizations" class="form-control">
+                            <option value="">All</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group">
+                        <label>Color</label>
+                        <select id="color" class="form-control">
+                            <option value="">All</option>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="yellow">Yellow</option>
+                            <!-- Add other options -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" class="form-control" style="background-color: white;" />
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4 justify-content-center align-self-center text-center">
+                    <div class="form-group mb-0 pt-lg-2">
+                        <button id="btnSearch" class="btn btn-secondary aos-init aos-animate" aria-label="Search" aria-labelledby="Search">Search</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row" id="pet-grid" style="margin-left: -5px; margin-right: -5px;">
+            <!-- Example pet card -->
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="cat" data-gender="male" data-age="young" data-sterilizations="yes" data-color="black">
+                    <img class="card-img-top" src="c2.jpg" alt="Cat 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Neko</h5>
+                        <p class="card-text">Gender: Male</p>
+                        <p class="card-text">Age: 1 months</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="cat" data-gender="female" data-age="young" data-sterilizations="yes" data-color="black">
+                    <img class="card-img-top" src="c1.jpg" alt="Dog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Gunny</h5>
+                        <p class="card-text">Gender: Female</p>
+                        <p class="card-text">Age: 1 months</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="dog" data-gender="male"  data-age="adult" data-sterilizations="yes" data-color="yellow">
+                    <!-- Your pet card content -->
+                    <img class="card-img-top" src="d1.jpg" alt="Dog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Cheese</h5>
+                        <p class="card-text">Gender: Male</p>
+                        <p class="card-text">Age: 2 years</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="dog" data-gender="male"  data-age="young" data-sterilizations="yes" data-color="yellow">
+                    <!-- Your pet card content -->
+                    <img class="card-img-top" src="d2.jpg" alt="Dog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nicky</h5>
+                        <p class="card-text">Gender: Male</p>
+                        <p class="card-text">Age: 1 months</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="dog" data-gender="female"  data-age="adult" data-sterilizations="yes" data-color="yellow">
+                    <!-- Your pet card content -->
+                    <img class="card-img-top" src="d3.jpg" alt = "Dog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Hana</h5>
+                        <p class="card-text">Gender: Female</p>
+                        <p class="card-text">Age: 6 months</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="cat" data-gender="male"  data-age="adult" data-sterilizations="yes" data-color="black">
+                    <!-- Your pet card content -->
+                    <img class="card-img-top" src="c3.jpg" alt="Dog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Pea</h5>
+                        <p class="card-text">Gender: Male</p>
+                        <p class="card-text">Age: 1 years</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="cat" data-gender="female"  data-age="adult" data-sterilizations="yes" data-color="white">
+                    <!-- Your pet card content -->
+                    <img class="card-img-top" src="c4.jpg" alt="Dog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Chucky</h5>
+                        <p class="card-text">Gender: Female</p>
+                        <p class="card-text">Age: 4 months</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4" style="padding-left: 5px; padding-right: 5px;">
+                <div class="pet-card" data-type="dog" data-gender="female"  data-age="young" data-sterilizations="yes" data-color="black">
+                    <!-- Your pet card content -->
+                    <img class="card-img-top" src="https://i.pinimg.com/564x/bb/7f/35/bb7f35fe600cca1ac79616d51ad5fa3e.jpg" alt="Dog 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Chi</h5>
+                        <p class="card-text">Gender: Female</p>
+                        <p class="card-text">Age: 3 months</p>
+                        <p class="card-text">Vaccinated: Yes</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more pet cards as needed -->
+        </div>
+
+
+    </div>
+
+    <div class="carousel-item active">
+        <img src="../AdoptionStories/ban.png" class="d-block w-100" alt="Banner 1">
+        <div class="carousel-caption d-none d-md-block overlay">
+            <h2 class="centered-text">Adopt, don’t shop. Save a life today.</h2>
+        </div>
+
+    </div>
+    </div>
+
+</main>
+
+<footer>
+    <div id="left-footer">
+        <h3 style="border-bottom: none;">Quick Links</h3>
+
+
+        <ul>
+            <li>
+                <a href="../Home/Home.html">Home</a>
+            </li>
+            <li>
+                <a href="../ContactUs/ContactUs.html">About</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="../AdoptionStories/AdoptionStories.html">Adoption Stories</a>
+            </li>
+            <li>
+                <a href="Pets.html">Available Pets</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="right-footer">
+        <h3 style="border-bottom: none;">Follow us on</h3>
+        <div id="social-media-footer">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="../main.js"></script>
+
+<script>
+    // Biến để lưu trữ giá trị lọc hiện tại
+    let filterType = '*';
+    let filterGender = '';
+    let filterAge = '';
+    let filterSterilizations = '';
+    let filterColor = '';
+    let filterName = '';
+
+    // Biến để lưu trữ dữ liệu gốc
+    let originalCards = [];
+
+    // Hàm lấy giá trị từ các ô nhập liệu và dropdown và cập nhật các biến lọc
+    function getInputValues() {
+        filterGender = document.getElementById('gender').value;
+        filterAge = document.getElementById('age').value;
+        filterSterilizations = document.getElementById('sterilizations').value;
+        filterColor = document.getElementById('color').value;
+        filterName = document.getElementById('name').value.toLowerCase(); // Chuyển đổi tên nhập vào thành chữ thường để so sánh
+    }
+
+    // Hàm khởi tạo dữ liệu gốc từ DOM
+    function initOriginalCards() {
+        originalCards = Array.from(document.querySelectorAll('.pet-card'));
+    }
+
+    // Hàm debounce để giảm số lần xử lý không cần thiết
+    function debounce(func, delay) {
+        let debounceTimer;
+        return function() {
+            const context = this;
+            const args = arguments;
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => func.apply(context, args), delay);
+        };
+    }
+
+    // Hàm lọc theo loại động vật
+    function filterByType(type) {
+        filterType = type;
+        updateGrid();
+    }
+
+    // Hàm cập nhật lưới dựa trên các tiêu chí lọc
+    function updateGrid() {
+        const filteredCards = originalCards.filter(card => {
+            const matchesType = filterType === '*' || card.dataset.type === filterType;
+            const matchesGender = filterGender ? card.dataset.gender === filterGender : true;
+            const matchesAge = filterAge ? card.dataset.age === filterAge : true;
+            const matchesSterilizations = filterSterilizations ? card.dataset.sterilizations === filterSterilizations : true;
+            const matchesColor = filterColor ? card.dataset.color === filterColor : true;
+            const matchesName = filterName ? card.querySelector('.card-title').textContent.toLowerCase().includes(filterName) : true;
+
+            return matchesType && matchesGender && matchesAge && matchesSterilizations && matchesColor && matchesName;
+        });
+
+        const petGrid = document.getElementById('pet-grid');
+
+        // Xóa toàn bộ thẻ trên lưới hiện tại
+        petGrid.innerHTML = '';
+
+        // Thêm các thẻ thỏa mãn điều kiện vào lưới
+        if (filteredCards.length > 0) {
+            filteredCards.forEach(card => {
+                petGrid.appendChild(card);
+            });
+        } else {
+            // Hiển thị thông báo nếu không có thẻ nào thỏa mãn điều kiện
+            let noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'col-12';
+            noResultsMessage.innerHTML = '<p>No pets found matching the criteria.</p>';
+            petGrid.appendChild(noResultsMessage);
+        }
+    }
+
+    // Hàm xử lý sự kiện nhấn nút "Tìm kiếm"
+    function searchPets() {
+        getInputValues();
+        updateGrid();
+    }
+
+    // Gắn sự kiện click cho các nút lọc loại động vật
+    document.querySelectorAll('.nav-link').forEach(button => {
+        button.addEventListener('click', event => {
+            event.preventDefault();
+            // Lấy giá trị từ data-filter mà không cần cắt bỏ dấu chấm
+            const type = event.target.dataset.filter;
+            filterByType(type);
+        });
+    });
+
+    // Gán sự kiện change cho các ô nhập liệu và dropdown với debounce
+    document.getElementById('gender').addEventListener('change', debounce(getInputValues, 300));
+    document.getElementById('age').addEventListener('change', debounce(getInputValues, 300));
+    document.getElementById('sterilizations').addEventListener('change', debounce(getInputValues, 300));
+    document.getElementById('color').addEventListener('change', debounce(getInputValues, 300));
+    document.getElementById('name').addEventListener('input', debounce(getInputValues, 300));
+
+    // Gán sự kiện click cho nút "Tìm kiếm"
+    document.getElementById('btnSearch').addEventListener('click', searchPets);
+
+    // Khởi tạo: thiết lập giá trị mặc định cho các biến lọc và gọi updateGrid để hiển thị lưới Card ban đầu
+    window.addEventListener('DOMContentLoaded', () => {
+        getInputValues();
+        initOriginalCards();
+        updateGrid();
+    });
+</script>
+
+</body>
+
+</html>
+

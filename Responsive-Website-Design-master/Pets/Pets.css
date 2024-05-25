@@ -1,0 +1,274 @@
+
+               #post-container {
+                    margin-top: 30px;
+                }
+
+                section {
+                    background-color: #f8f9fa;
+                    padding: 20px;
+                    border-radius: 10px;
+                }
+
+                aside {
+                    background-color: #e9ecef;
+                    padding: 20px;
+                    border-radius: 10px;
+                }
+
+                h3 {
+                    border-bottom: 2px solid #343a40;
+                    padding-bottom: 10px;
+                }
+        .container {
+        margin-top: 10px;}
+
+        #pet-grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom:40px;
+
+        }
+
+        .pet-card {
+        flex: 0 1 calc(25% - 10px); /* Giảm kích thước để tính đến gap và border */
+        margin: 5px; /* Bạn có thể loại bỏ margin nếu đã sử dụng gap */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+
+
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           position: relative;
+            overflow: hidden;
+
+
+        transition: transform 0.3s ease;
+        }
+
+                .pet-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+                }
+
+                .pet-card img {
+                    width: 100%;
+                    height: auto;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    transition: transform 0.3s ease;
+                }
+
+
+        .pet-card:hover img {
+            transform: scale(1.1);
+        }
+
+                .pet-card .card-body {
+                    padding: 15px;
+                    background-color: #fff;
+                }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            margin-bottom: 0.25rem;
+        }
+
+                .pet-card .card-body h5 {
+                    margin-bottom: 5px;
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    color: #555;
+                }
+
+                .pet-card .card-body p {
+                    margin-bottom: 5px;
+                    font-size: 1rem;
+                    color: #666;
+                }
+
+        .pet-card {
+        flex: 0 1 calc(25% - 10px); // Adjust the percentage and margin as needed
+        margin: 5px; // Add margin for spacing between cards
+        }
+
+
+                @media (max-width: 991.98px) {
+                    .pet-card {
+                        flex: 0 1 calc(50% - 10px);
+                        margin-bottom: 15px;
+                    }
+                }
+
+
+               /* Custom styling for specific pet genders */
+                .pet-card[data-gender="male"] {
+                    border: 2px solid rgba(105, 220, 187);
+                }
+
+                .pet-card[data-gender="female"] {
+                    border: 2px solid rgba(105, 220, 187);
+
+               }
+
+
+
+
+
+
+
+        /* Mới mới
+        /* Section Heading */
+        /* Phần tiêu đề của một phần */
+        .section-heading {
+            margin-top: 5rem; /* Khoảng cách từ phần tiêu đề đến phần trên cùng của trang là 5rem */
+            padding-bottom: 1rem; /* Khoảng cách từ phần tiêu đề đến phần dưới cùng của nó là 1rem */
+            border-bottom: 2px solid #00bcd4; /* Đường viền dưới của phần tiêu đề có độ dày 2px và màu #00bcd4 */
+        }
+
+        /* Phần tiêu đề con (h2) bên trong phần tiêu đề */
+        .section-heading h2 {
+            font-size: 2.5rem; /* Kích thước chữ của tiêu đề là 2.5rem */
+            color: #333; /* Màu chữ của tiêu đề là #333 */
+            text-transform: uppercase; /* Chuyển đổi tất cả các chữ trong tiêu đề thành chữ in hoa */
+            animation: zoomIn 0.5s ease-in-out; /* Sử dụng hiệu ứng zoomIn có thời gian 0.5s, hiệu ứng này sẽ được áp dụng khi tiêu đề xuất hiện */
+        }
+
+        /* Giao diện điều hướng bằng nav-pills */
+        .nav-pills {
+            justify-content: center; /* Căn giữa các mục điều hướng */
+            padding: 1rem 0; /* Khoảng cách giữa các mục điều hướng là 1rem (phía trên và phía dưới) */
+        }
+
+        /* Liên kết trong giao diện điều hướng nav-pills */
+        .nav-pills .nav-link {
+            margin: 0 0.5rem; /* Khoảng cách giữa các liên kết là 0.5rem */
+            border-radius: 50px; /* Bo góc của liên kết là 50px */
+            background-color: white; /* Nền của liên kết là trong suốt */
+            color: #555; /* Màu chữ của liên kết là #555 */
+            transition: all 0.3s ease; /* Sử dụng hiệu ứng chuyển đổi với thời gian là 0.3s */
+            font-size: 24px;
+        }
+
+        /* Form Controls */
+        .container .form-group label {
+            display: block; /* Thiết lập label hiển thị là khối (block) */
+            color: #666; /* Màu chữ của label là #666 */
+            margin-bottom: 0rem; /* Khoảng cách dưới của label là 0.5rem */
+
+        }
+
+        .container .form-control {
+            width: 100%; /* Độ rộng của nút "Tìm kiếm" là 100% */
+            height: 2.5rem;
+
+            border: 2px solid #ddd; /* Đường viền của các ô nhập liệu là 2px solid #ddd */
+            border-radius: 25px; /* Bo góc của các ô nhập liệu là 25px */
+            font-size: 1rem; /* Kích thước chữ của các ô nhập liệu là 1rem */
+            transition: border-color 0.3s ease; /* Sử dụng hiệu ứng chuyển đổi màu đường viền khi focus với thời gian là 0.3s */
+
+        }
+
+        .container .form-control:focus {
+            border-color: #00bcd4; /* Màu của đường viền khi ô nhập liệu được focus là #00bcd4 */
+            box-shadow: none; /* Loại bỏ hiệu ứng box-shadow khi ô nhập liệu được focus */
+        }
+
+        /* Button Search */
+        #btnSearch {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+            width: 100%; /* Độ rộng của nút "Tìm kiếm" là 100% */
+            height: 2.5rem; /* Chiều cao của nút "Tìm kiếm" */
+            padding: 0.4rem ; /* Khoảng cách bên trong của nút "Tìm kiếm" */
+            padding-left: 0rem; /* Lề trái của nút "Tìm kiếm" */
+            background-color: rgba(105, 220, 187, 0.9); /* Màu nền của nút "Tìm kiếm" là #00bcd4 */
+            border: none; /* Không có đường viền cho nút "Tìm kiếm" */
+            border-radius: 25px; /* Bo góc của nút "Tìm kiếm" là 25px */
+            color: white; /* Màu chữ của nút "Tìm kiếm" là trắng */
+            font-size: 1.2rem; /* Kích thước chữ của nút "Tìm kiếm" là 1.2rem */
+            transition: background-color 0.3s ease; /* Sử dụng hiệu ứng chuyển đổi màu nền khi hover với thời gian là 0.3s */
+            cursor: pointer; /* Con trỏ chuột khi di chuyển vào nút "Tìm kiếm" */
+        }
+
+        #btnSearch:hover {
+            background-color: rgba(105, 220, 187); /* Màu nền của nút "Tìm kiếm" khi hover là #0197a5 */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .section-heading h2 {
+                font-size: 2rem; /* Kích thước chữ của tiêu đề là 2rem khi màn hình có độ rộng nhỏ hơn hoặc bằng 768px */
+            }
+
+            .nav-pills .nav-link {
+                margin: 0.25rem; /* Khoảng cách giữa các liên kết trong điều hướng nav-pills là 0.25rem khi màn hình có độ rộng nhỏ hơn hoặc bằng 768px */
+            }
+        }
+
+        /* Animation */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5); /* Từ kích thước 0.5 khi bắt đầu hiệu ứng */
+                opacity: 0; /* Độ mờ của phần tử là 0 khi bắt đầu hiệu ứng */
+            }
+            to {
+                transform: scale(1); /* Đến kích thước 1 khi kết thúc hiệu ứng */
+                opacity: 1; /* Độ mờ của phần tử là 1 khi kết thúc hiệu ứng */
+            }
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .nav-link:active {
+            background-color: rgba(105, 220, 187);
+            /* Màu nền của nút khi nó được chọn, thay đổi alpha tùy theo mức độ trong suốt mong muốn */
+        }
+main {
+margin-bottom: 30px;}
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            color: white; /* Nếu bạn muốn đoạn văn màu trắng */
+        }
+
+        .centered-text {
+            font-weight: bold;
+            font-size: 3em; /* Phóng to kích thước chữ, điều chỉnh theo ý bạn */
+            line-height: 1.2; /* Điều chỉnh khoảng cách giữa các dòng */
+        }
+        #post-container {
+            margin-top: 30px;
+        }
+
+        section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        aside {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+/* CSS to make the overlay semi-transparent */
+.carousel-caption.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption .centered-text {
+    color: #fff; /* White text color */
+    font-weight: bold;
+}
