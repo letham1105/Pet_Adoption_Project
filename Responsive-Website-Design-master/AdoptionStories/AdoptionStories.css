@@ -1,28 +1,13 @@
-.card-image {
-    width: 100%; /* Sử dụng 100% chiều rộng để hình ảnh tự điều chỉnh kích thước */
-    max-width: 600px; /* Đặt chiều rộng tối đa cho hình ảnh */
-    height: auto; /* Để chiều cao tự động điều chỉnh theo tỉ lệ */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-image img {
-    width: 100%; /* Đảm bảo hình ảnh phủ đầy chiều rộng của thẻ */
-    height: auto; /* Đảm bảo tỉ lệ hình ảnh không bị thay đổi */
-    object-fit: cover; /* Đảm bảo hình ảnh vừa khung mà không bị méo */
-    object-position: center; /* Trung tâm hóa hình ảnh */
-}
-
-/* CSS to make the overlay semi-transparent */
-.carousel-caption.overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.carousel-caption .centered-text {
-    color: #fff; /* White text color */
-    font-weight: bold;
-}
+  <style>
+        .quote {
+            font-style: italic;
+            background-color: #f9f9f9;
+            border-left: 5px solid #ccc;
+            margin: 20px 0;
+            padding: 10px 20px;
+        }
+        .quote-author {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>

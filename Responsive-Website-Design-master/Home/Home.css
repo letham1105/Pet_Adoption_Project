@@ -1,0 +1,25 @@
+.section-heading {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card {
+    width: 100%; /* Đảm bảo rằng card sẽ chiếm toàn bộ chiều rộng của phần hiển thị */
+    max-width: 200px; /* Đặt kích thước tối đa cho card */
+    margin: 0 auto; /* Căn giữa card */
+    margin-bottom: 20px; /* Khoảng cách giữa các card */
+}
+
+.card-image {
+    width: 100%; /* Sử dụng 100% chiều rộng để hình ảnh tự điều chỉnh kích thước */
+    max-width: 100%; /* Đặt chiều rộng tối đa cho hình ảnh */
+    height:100; /* Để chiều cao tự động điều chỉnh theo tỉ lệ */
+    overflow: hidden; /* Ẩn phần hình ảnh vượt ra khỏi kích thước của card */
+}
+
+.card-image img {
+    width: 100%; /* Đảm bảo rằng hình ảnh sẽ phủ toàn bộ kích thước của card */
+    height: auto; /* Đảm bảo tỉ lệ của hình ảnh không bị thay đổi */
+    object-fit: cover; /* Đảm bảo hình ảnh vừa khung mà không bị méo */
+    object-position: center; /* Căn giữa hình ảnh */
+}

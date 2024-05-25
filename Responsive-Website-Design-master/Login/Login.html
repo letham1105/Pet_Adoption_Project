@@ -35,7 +35,7 @@
             <a href="../ContactUs/ContactUs.html">Contact Us</a>
         </li>
         <li>
-            <input type="text" placeholder="Search Here">
+            <input type="text" placeholder="Search Here" required>
         </li>
     </ul>
 </div>
@@ -46,7 +46,9 @@
     </div>
 
     <div id="menu-icon">
-        <i class="fas fa-bars"></i>
+        <div>
+            <i class="fas fa-bars"></i>
+        </div>
     </div>
     <ul>
         <li>
@@ -61,9 +63,11 @@
         <li>
             <a href="../ContactUs/ContactUs.html">Contact Us</a>
         </li>
-        <div id="search-icon">
-            <i class="fas fa-heart"></i> <!-- Icon trái tim -->
-        </div>
+        <li>
+            <div id="search-icon">
+                <i class="fas fa-heart"></i> <!-- Icon trái tim -->
+            </div>
+        </li>
     </ul>
 </nav>
 
@@ -73,11 +77,11 @@
             <header>Login</header>
             <form action="#">
                 <div class="field input-field">
-                    <input type="email" placeholder="Email" class="input">
+                    <input type="email" placeholder="Email" class="input" required>
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="Password" class="password">
+                    <input type="password" placeholder="Password" class="password" required>
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
 
@@ -120,15 +124,15 @@
             <header>Signup</header>
             <form action="#">
                 <div class="field input-field">
-                    <input type="email" placeholder="Email" class="input">
+                    <input type="email" placeholder="Email" class="input" required>
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="Create password" class="password">
+                    <input type="password" placeholder="Create password" class="password" required>
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="Confirm password" class="password">
+                    <input type="password" placeholder="Confirm password" class="password" required>
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
 
@@ -145,11 +149,13 @@
         <div class="line"></div>
 
         <div class="media-options">
-            <a href="#" class="field facebook">
+            <a href="https://www.facebook.com/v12.0/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=YOUR_REDIRECT_URI&scope=email" class="field facebook">
                 <i class='bx bxl-facebook facebook-icon'></i>
                 <span>Login with Facebook</span>
             </a>
         </div>
+
+
 
         <div class="media-options">
             <a href="#" class="field google">
@@ -208,12 +214,10 @@
                 </li>
             </ul>
         </div>
-
     </div>
 </footer>
 
 <script src="../main.js"></script>
 <script src="script.js"></script>
 </body>
-
 </html>
